@@ -1,15 +1,31 @@
-mat-card{
+mat-card {
     width: 20%;
     margin: 0 auto;
     margin-bottom: 1%;
-
-    img{
+    background-image: url('../../../assets/background-card.jpg');
+    img {
         width: 100%;
+        margin: 0;
+        margin-bottom: 5%;
+        border-radius: 130px;
     }
 }
 
-.principal{
+.principal {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    
 }
+
+h2{
+    color: white;
+    font-size: 1.5em;
+}
+
+span{
+    color: white;
+    font-size: 1em;
+}
+

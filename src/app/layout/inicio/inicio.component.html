@@ -9,12 +9,14 @@
 </div>
 <div class="principal">
     <mat-card *ngFor="let person of characters.results">
-        <img mat-card-image src="{{person.image}}">
+        <div>
+            <img mat-card-image src="{{person.image}}">
+        </div>
         <mat-card-title>
-            {{person.name}}
+            <h2>{{person.name}}</h2>
         </mat-card-title>
         <mat-card-subtitle>
-            {{person.species}}
+            <span>{{person.species}} - {{person.origin.name}}</span>
         </mat-card-subtitle>
     </mat-card>
 </div>
