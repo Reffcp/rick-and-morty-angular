@@ -8,13 +8,27 @@ import { CharactersService } from '../../shared/services/characters.service';
 })
 export class InicioComponent implements OnInit {
   characters:any;
+  page:number =1;
   constructor(private cs:CharactersService) { }
 
   ngOnInit(): void {
-    this.cs.getChracters(1).subscribe( (data:any) => {
+    this.getCharacters();
+  }
+
+  siguiente(){
+    this.page++;
+    this.getCharacters();
+  }
+
+  anterior(){
+    this.page--;
+    this.getCharacters();
+  }
+
+  getCharacters(){
+    this.cs.getChracters(this.page).subscribe( (data:any) => {
       console.log(data);
-      
-      this.characters=data.results;
+      this.characters=data;
     }) 
   }
 

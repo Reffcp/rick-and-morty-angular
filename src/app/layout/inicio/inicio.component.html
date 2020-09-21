@@ -1,15 +1,20 @@
-<mat-grid-list cols="4" rowHeight="1:1">
-    <mat-grid-tile *ngFor="let person of characters">
-        <a href="">
-            <mat-card>
-                <img mat-card-md-image src="{{person.image}}">
-                <mat-card-title>
-                    {{person.name}}
-                </mat-card-title>
-                <mat-card-subtitle>
-                    {{person.species}}
-                </mat-card-subtitle>
-            </mat-card>
-        </a>
-    </mat-grid-tile>
-</mat-grid-list>
+<div>
+    <button mat-icon-button aria-label="next-page" (click)="anterior()">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="next-page" (click)="siguiente()">
+        <mat-icon>arrow_forward_ios
+        </mat-icon>
+    </button>
+</div>
+<div class="principal">
+    <mat-card *ngFor="let person of characters.results">
+        <img mat-card-image src="{{person.image}}">
+        <mat-card-title>
+            {{person.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{person.species}}
+        </mat-card-subtitle>
+    </mat-card>
+</div>
