@@ -1,0 +1,15 @@
+<mat-grid-list cols="4" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let person of characters">
+        <a href="">
+            <mat-card>
+                <img mat-card-md-image src="{{person.image}}">
+                <mat-card-title>
+                    {{person.name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{person.species}}
+                </mat-card-subtitle>
+            </mat-card>
+        </a>
+    </mat-grid-tile>
+</mat-grid-list>
