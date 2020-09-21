@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rick-and-morty-angular"
+    }
+  },
+  "defaultProject": "rick-and-morty-angular",
+  "cli": {
+    "analytics": "643c33b1-8078-48d7-9f25-00611a72b01d"
+  }
 }
