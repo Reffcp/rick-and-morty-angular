@@ -1,0 +1,21 @@
+.div-error{
+    background-image: url('../../assets/404.jpg');
+    background-size: cover;
+    background-position-x: center;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    height: 100%;
+    padding: 5%;
+
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+.btn-regresar{
+    position: fixed;
+    left: 1%;
+    top: 1%;
+    z-index: 101;
+}
