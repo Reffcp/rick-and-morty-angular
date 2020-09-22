@@ -1,14 +1,21 @@
-<div>
+<div class="paginas">
     <button mat-icon-button aria-label="next-page" (click)="anterior()">
         <mat-icon>arrow_back_ios</mat-icon>
     </button>
+    <div class="paginas">
+        <div *ngFor="let pagina of pages">
+            <button mat-icon-button aria-label="next-page" (click)="irAPag(pagina.number)">
+                {{pagina.number}}
+            </button>
+        </div>
+    </div>
     <button mat-icon-button aria-label="next-page" (click)="siguiente()">
         <mat-icon>arrow_forward_ios
         </mat-icon>
     </button>
 </div>
 <div class="principal">
-    <mat-card *ngFor="let person of characters.results">
+    <mat-card *ngFor="let person of characters.results" (click)="detallePersonaje(person.id)">
         <div>
             <img mat-card-image src="{{person.image}}">
         </div>
