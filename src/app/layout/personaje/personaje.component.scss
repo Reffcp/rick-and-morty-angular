@@ -1,7 +1,7 @@
 
 
 mat-card {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 1%;
     
@@ -39,4 +39,14 @@ span{
     left: 1%;
     top: 10%;
     z-index: 101;
+}
+
+@media (max-width: 456px) {
+    mat-card{
+        width: 85%;
+
+        img{
+            width: 35%;
+        }
+    }
 }

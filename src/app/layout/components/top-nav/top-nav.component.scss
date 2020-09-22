@@ -13,3 +13,9 @@
   a{
     font-size: 1rem;
   }
+
+  @media (max-width: 456px) {
+    img{
+      width: 45%;
+    }
+}

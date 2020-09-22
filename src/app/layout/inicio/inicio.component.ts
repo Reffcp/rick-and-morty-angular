@@ -63,6 +63,7 @@ export class InicioComponent implements OnInit {
   irAPag(pagina){
     this.page=pagina;
     this.getCharacters();
+    this.router.navigate(['inicio',pagina]);
   }
 
   detallePersonaje(id){

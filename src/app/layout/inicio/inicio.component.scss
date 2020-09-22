@@ -2,7 +2,7 @@ mat-card {
     width: 17%;
     margin: 0 auto;
     margin-bottom: 1%;
-    background-image: url('../../../assets/background-card.png');
+    background-image: url("../../../assets/background-card.png");
     img {
         width: 65%;
         margin: 0;
@@ -16,25 +16,41 @@ mat-card {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    
 }
 
-h2{
+h2 {
     color: white;
     font-size: 1.1rem;
 }
 
-span{
+span {
     color: white;
     font-size: 1rem;
 }
 
-.paginas{
+.paginas {
     display: flex;
     justify-content: center;
 }
 
-.pagina-activa{
+.pagina-activa {
     background-color: antiquewhite;
 }
 
+@media (max-width: 768px) {
+    mat-card {
+        width: 28%;
+    }
+}
+
+@media (max-width: 650px) {
+    mat-card {
+        width: 43%;
+    }
+}
+
+@media (max-width: 456px) {
+    mat-card {
+        width: 80%;
+    }
+}
