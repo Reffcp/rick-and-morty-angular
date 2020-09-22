@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CharactersService } from '../../shared/services/characters.service';
 
 @Component({
@@ -10,10 +10,16 @@ import { CharactersService } from '../../shared/services/characters.service';
 export class InicioComponent implements OnInit {
   characters:any;
   page:number =1;
+  idpage:string ="1";
   pages:any =[];
-  constructor(private cs:CharactersService, public router:Router) { }
+  constructor(private cs:CharactersService, public router:Router, public ar:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.idpage = this.ar.snapshot.paramMap.get('page');
+    if (this.idpage!=undefined) {
+      this.page=+this.idpage;
+      this.pages=[]
+    }
     this.getCharacters();
   }
 
@@ -60,7 +66,7 @@ export class InicioComponent implements OnInit {
   }
 
   detallePersonaje(id){
-    this.router.navigate(['personaje',id]);
+    this.router.navigate(['personaje',id,this.page]);
   }
 
 }

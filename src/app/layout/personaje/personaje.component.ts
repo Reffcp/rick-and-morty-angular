@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CharactersService } from 'src/app/shared/services/characters.service';
 
 @Component({
@@ -9,11 +9,13 @@ import { CharactersService } from 'src/app/shared/services/characters.service';
 })
 export class PersonajeComponent implements OnInit {
   idPersonaje:any=1;
+  idPagina:any=1;
   person:any=1;
-  constructor(public ar:ActivatedRoute,public cs:CharactersService) { }
+  constructor(public ar:ActivatedRoute,public cs:CharactersService, public router:Router) { }
 
   ngOnInit(): void {
     this.idPersonaje = this.ar.snapshot.paramMap.get('id');
+    this.idPagina = this.ar.snapshot.paramMap.get('page');
     this.getPersonaje(this.idPersonaje)
   }
 
@@ -22,6 +24,10 @@ export class PersonajeComponent implements OnInit {
       .subscribe(data => {
         this.person=data;
       })
+  }
+
+  regresar(){
+    this.router.navigate(['inicio',this.idPagina])
   }
 
 }

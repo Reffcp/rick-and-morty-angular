@@ -20,7 +20,11 @@ const routes: Routes = [
         component: InicioComponent
       },
       {
-        path:'personaje/:id',
+        path:'inicio/:page',
+        component: InicioComponent
+      },
+      {
+        path:'personaje/:id/:page',
         component: PersonajeComponent
       },
     ]
