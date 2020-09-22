@@ -1,6 +1,6 @@
 {
-  "name": "rick-and-morty-angular",
-  "short_name": "rick-and-morty-angular",
+  "name": "Rick and Morty",
+  "short_name": "Rick and Morty",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
