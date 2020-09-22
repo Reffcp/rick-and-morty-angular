@@ -20,6 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [],
   imports: [
@@ -42,7 +43,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatPaginatorModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTabsModule,
   ],
   exports: [
     MatButtonModule,
@@ -63,7 +65,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatPaginatorModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTabsModule,
   ]
 })
 export class MaterialModule { }

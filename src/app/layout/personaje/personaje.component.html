@@ -1,16 +1,63 @@
-<mat-grid-list cols="3" rowHeight="1:1">
-    <mat-grid-tile colspan="1">
-        <mat-card>
-            <div>
-                <img mat-card-image src="{{person.image}}">
-            </div>
-            <mat-card-title>
-                <h2>{{person.name}}</h2>
-            </mat-card-title>
-            <mat-card-subtitle>
-                <span>{{person.species}} - {{person.origin.name}}</span>
-            </mat-card-subtitle>
-        </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2">2</mat-grid-tile>
-</mat-grid-list>
+<button mat-fab color="accent" aria-label="icon regresar" class="btn-regresar">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+<mat-card>
+    <div class="img-container">
+        <img mat-card-image src="{{person.image}}">
+    </div>
+    <mat-card-title>
+        <h2>{{person.name}}</h2>
+    </mat-card-title>
+    <mat-card-subtitle>
+        <span>{{person.species}} - {{person.origin.name}}</span>
+    </mat-card-subtitle>
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="General">
+                <table matSort class="tb-datos-generales">
+                    <tr>
+                        <th mat-sort-header="name">Name</th>
+                        <th mat-sort-header="status">Status</th>
+                        <th mat-sort-header="species">Species</th>
+                        <th mat-sort-header="type">Type</th>
+                        <th mat-sort-header="gender">Gender</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{person.name}}</td>
+                        <td>{{person.status}}</td>
+                        <td>{{person.species}}</td>
+                        <td>{{person.type}}</td>
+                        <td>{{person.gender}}</td>
+                    </tr>
+                </table>
+            </mat-tab>
+            <mat-tab label="Location">
+                <table matSort class="tb-datos-generales">
+                    <tr>
+                        <th mat-sort-header="name">Origin</th>
+                        <th mat-sort-header="status">Location</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{person.origin.name}}</td>
+                        <td>{{person.location.name}}</td>
+                    </tr>
+                </table>
+            </mat-tab>
+            <mat-tab label="Episodes">
+                <table matSort class="tb-datos-generales">
+                    <tr>
+                        <th mat-sort-header="name">Total Episodes</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2>{{person.episode.length}}</h2>
+                        </td>
+                    </tr>
+                </table>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
