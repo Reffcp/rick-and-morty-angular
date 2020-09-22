@@ -21,16 +21,20 @@ mat-card {
 
 h2{
     color: white;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 span{
     color: white;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .paginas{
     display: flex;
     justify-content: center;
+}
+
+.pagina-activa{
+    background-color: antiquewhite;
 }
 

@@ -4,7 +4,7 @@
     </button>
     <div class="paginas">
         <div *ngFor="let pagina of pages">
-            <button mat-icon-button aria-label="next-page" (click)="irAPag(pagina.number)">
+            <button mat-icon-button aria-label="next-page" (click)="irAPag(pagina.number)" [class]="pagina.activa">
                 {{pagina.number}}
             </button>
         </div>

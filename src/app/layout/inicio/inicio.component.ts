@@ -45,7 +45,11 @@ export class InicioComponent implements OnInit {
         if (this.characters.info.pages>x) {
           let pagina= this.page;
           pagina=pagina+x;
-          this.pages.push({number: pagina})
+          this.pages.push(
+            {number: pagina,
+            activa: (this.page==pagina) ? 'pagina-activa':''
+            }
+            )
         }
     }
   }
