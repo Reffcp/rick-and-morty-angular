@@ -13,6 +13,10 @@ export class CharactersService {
     return this.http.get('https://rickandmortyapi.com/api/character?page='+((page!=undefined ? page : '1')));
   }
 
+  getEpisodes(page){
+    return this.http.get('https://rickandmortyapi.com/api/episode?page='+((page!=undefined ? page : '1')));
+  }
+
   getCharacter(id){
     return this.http.get('https://rickandmortyapi.com/api/character/'+id);
   }

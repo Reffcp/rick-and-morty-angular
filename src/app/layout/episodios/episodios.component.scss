@@ -1,0 +1,58 @@
+mat-card {
+    width: 17%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    background-image: url("../../../assets/background-episodes.png");
+    background-size: cover;
+    background-position: center;
+    img {
+        width: 65%;
+        margin: 0;
+        margin-bottom: 5%;
+        border-radius: 300px;
+    }
+}
+
+.principal {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 1.1rem;
+}
+
+span {
+    color: white;
+    font-size: 1rem;
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+}
+
+.pagina-activa {
+    background-color: antiquewhite;
+}
+
+@media (max-width: 768px) {
+    mat-card {
+        width: 28%;
+    }
+}
+
+@media (max-width: 650px) {
+    mat-card {
+        width: 43%;
+    }
+}
+
+@media (max-width: 456px) {
+    mat-card {
+        width: 80%;
+    }
+}

@@ -6,11 +6,12 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { InicioComponent } from './inicio/inicio.component';
 import { PersonajeComponent } from './personaje/personaje.component';
+import { EpisodiosComponent } from './episodios/episodios.component';
 
 
 
 @NgModule({
-  declarations: [LayoutComponent, TopNavComponent, InicioComponent, PersonajeComponent,],
+  declarations: [LayoutComponent, TopNavComponent, InicioComponent, PersonajeComponent, EpisodiosComponent,],
   imports: [
     CommonModule,
     LayoutRoutingModule,

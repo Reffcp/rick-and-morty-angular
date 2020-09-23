@@ -1,0 +1,29 @@
+<div class="paginas">
+    <button mat-icon-button aria-label="next-page" (click)="anterior()">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <div class="paginas">
+        <div *ngFor="let pagina of pages">
+            <button mat-icon-button aria-label="next-page" (click)="irAPag(pagina.number)" [class]="pagina.activa">
+                {{pagina.number}}
+            </button>
+        </div>
+    </div>
+    <button mat-icon-button aria-label="next-page" (click)="siguiente()">
+        <mat-icon>arrow_forward_ios
+        </mat-icon>
+    </button>
+</div>
+<div class="principal">
+    <mat-card *ngFor="let episode of episodes.results" (click)="detallePersonaje(episode.id)">
+        <div>
+            <img mat-card-image src="../../../assets/Rick_and_Morty_logo.png">
+        </div>
+        <mat-card-title>
+            <h2>{{episode.name}}</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span>{{episode.episode}} - {{episode.air_date}}</span>
+        </mat-card-subtitle>
+    </mat-card>
+</div>
