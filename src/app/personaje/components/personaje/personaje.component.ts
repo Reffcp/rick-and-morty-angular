@@ -14,9 +14,13 @@ export class PersonajeComponent implements OnInit {
   constructor(public ar:ActivatedRoute,public cs:CharactersService, public router:Router) { }
 
   ngOnInit(): void {
-    this.idPersonaje = this.ar.snapshot.paramMap.get('id');
-    this.idPagina = this.ar.snapshot.paramMap.get('page');
-    this.getPersonaje(this.idPersonaje)
+    this.ar.params.subscribe(params => {
+      console.log('params: ', params);
+      this.idPersonaje = params.id;
+      this.idPagina = params.page;
+      this.getPersonaje(this.idPersonaje);
+    });
+
   }
 
   getPersonaje(id){

@@ -23,8 +23,8 @@ export class InicioComponent implements OnInit {
     this.getCharacters();
   }
 
-  siguiente(){
-    if (this.characters.info.pages>this.page) {
+  siguiente(): void {
+    if (this.characters.info.pages > this.page) {
     this.page++;
     this.getCharacters();
     }
@@ -45,23 +45,23 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  crearPaginas(){
-    this.pages=[];
+  crearPaginas(): void{
+    this.pages = [];
     for (let x = 0; x < 5; x++) {
-        if (this.characters.info.pages>x) {
-          let pagina= this.page;
-          pagina=pagina+x;
+        if (this.characters.info.pages > x) {
+          let pagina = this.page;
+          pagina = pagina + x;
           this.pages.push(
             {number: pagina,
-            activa: (this.page==pagina) ? 'pagina-activa':''
+            activa: (this.page === pagina) ? 'pagina-activa' : ''
             }
-            )
+            );
         }
     }
   }
 
-  irAPag(pagina){
-    this.page=pagina;
+  irAPag(pagina): void{
+    this.page = pagina;
     this.getCharacters();
     this.router.navigate(['inicio',pagina]);
   }
