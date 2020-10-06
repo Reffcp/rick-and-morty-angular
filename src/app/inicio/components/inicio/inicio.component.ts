@@ -16,7 +16,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.idpage = this.ar.snapshot.paramMap.get('page');
-    if (this.idpage!=undefined) {
+    if (this.idpage!==undefined) {
       this.page=+this.idpage;
       this.pages=[]
     }
@@ -42,7 +42,7 @@ export class InicioComponent implements OnInit {
       console.log(data);
       this.characters=data;
       this.crearPaginas();
-    }) 
+    })
   }
 
   crearPaginas(){
