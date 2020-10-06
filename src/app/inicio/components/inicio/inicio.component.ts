@@ -8,17 +8,17 @@ import { CharactersService } from 'src/app/core/services/characters.service';
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
-  characters:any;
-  page:number =1;
-  idpage:string ="1";
-  pages:any =[];
-  constructor(private cs:CharactersService, public router:Router, public ar:ActivatedRoute) { }
+  characters: any;
+  page = 1;
+  idpage = '1';
+  pages: any = [];
+  constructor(private cs: CharactersService, public router: Router, public ar: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.idpage = this.ar.snapshot.paramMap.get('page');
-    if (this.idpage!==undefined) {
-      this.page=+this.idpage;
-      this.pages=[]
+    if (this.idpage !== undefined) {
+      this.page = + this.idpage;
+      this.pages = [];
     }
     this.getCharacters();
   }
@@ -30,19 +30,19 @@ export class InicioComponent implements OnInit {
     }
   }
 
-  anterior(){
-    if (this.page>1) {
+  anterior(): void{
+    if (this.page > 1) {
       this.page--;
-    this.getCharacters();
+      this.getCharacters();
     }
   }
 
-  getCharacters(){
-    this.cs.getChracters(this.page).subscribe( (data:any) => {
+  getCharacters(): void{
+    this.cs.getChracters(this.page).subscribe( (data: any) => {
       console.log(data);
-      this.characters=data;
+      this.characters = data;
       this.crearPaginas();
-    })
+    });
   }
 
   crearPaginas(): void{
@@ -63,11 +63,11 @@ export class InicioComponent implements OnInit {
   irAPag(pagina): void{
     this.page = pagina;
     this.getCharacters();
-    this.router.navigate(['inicio',pagina]);
+    this.router.navigate(['inicio', pagina]);
   }
 
-  detallePersonaje(id){
-    this.router.navigate(['personaje',id,this.page]);
+  detallePersonaje(id): void{
+    this.router.navigate(['personaje', id, this.page]);
   }
 
 }

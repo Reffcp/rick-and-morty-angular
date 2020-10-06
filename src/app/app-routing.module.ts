@@ -41,43 +41,8 @@ const routes: Routes = [
   }
 ];
 
-
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: LayoutComponent,
-//     children:[
-//       {
-//         path:'',
-//         pathMatch: 'full',
-//         redirectTo: 'inicio'
-//       },
-//       {
-//         path:'inicio',
-//         component: InicioComponent
-//       },
-//       {
-//         path:'inicio/:page',
-//         component: InicioComponent
-//       },
-//       {
-//         path:'personaje/:id/:page',
-//         component: PersonajeComponent
-//       },
-//       {
-//         path: 'episodios',
-//         component: EpisodiosComponent
-//       },
-//       {
-//         path: 'episodios/:page',
-//         component: EpisodiosComponent
-//       },
-//     ]
-//   }
-// ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
+  imports: [RouterModule.forRoot(routes, {
     preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]

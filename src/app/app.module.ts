@@ -24,7 +24,6 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

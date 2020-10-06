@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class ErrorComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
-  regresar(){
-    this.router.navigate(['inicio'])
+  regresar(): void{
+    this.router.navigate(['inicio']);
   }
 }

@@ -8,10 +8,10 @@ import { CharactersService } from 'src/app/core/services/characters.service';
   styleUrls: ['./personaje.component.scss']
 })
 export class PersonajeComponent implements OnInit {
-  idPersonaje:any=1;
-  idPagina:any=1;
-  person:any=1;
-  constructor(public ar:ActivatedRoute,public cs:CharactersService, public router:Router) { }
+  idPersonaje: any = 1;
+  idPagina: any = 1;
+  person: any = 1;
+  constructor(public ar: ActivatedRoute, public cs: CharactersService, public router: Router) { }
 
   ngOnInit(): void {
     this.ar.params.subscribe(params => {
@@ -23,15 +23,15 @@ export class PersonajeComponent implements OnInit {
 
   }
 
-  getPersonaje(id){
+  getPersonaje(id): void{
     this.cs.getCharacter(id)
       .subscribe(data => {
-        this.person=data;
-      })
+        this.person = data;
+      });
   }
 
-  regresar(){
-    this.router.navigate(['inicio',this.idPagina])
+  regresar(): void{
+    this.router.navigate(['inicio', this.idPagina]);
   }
 
 }
